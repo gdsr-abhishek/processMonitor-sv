@@ -35,5 +35,5 @@ app.use((err,req,res)=>{
 })
 
 app.listen(port,()=>{
-    console.log("I am being used yay!");
+    console.log("Backend served at http://localhost:8000/");
 })
