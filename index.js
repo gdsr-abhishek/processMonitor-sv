@@ -1,10 +1,10 @@
 import express from "express";
 import { processService } from "./Service/processService.js";
+import cors from "cors";
 const port = 8080;
-
 const app = express();
 
-app.get('/ps/all',function(req,res){
+app.get('/ps/all',cors(),function(req,res){
   let result=[];
   processService.getAllService((stdout)=>{
          
@@ -35,5 +35,5 @@ app.use((err,req,res)=>{
 })
 
 app.listen(port,()=>{
-    console.log("Backend served at http://localhost:8000/");
+    console.log("Backend served at http://localhost:8080/");
 })
